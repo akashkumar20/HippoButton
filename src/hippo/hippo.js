@@ -14,10 +14,6 @@ class Hippo extends Component{
         };
     }
     componentDidMount() {
-        // this.interval = setInterval(() => this.setState((pre) => ({
-        //     ...pre,
-        //     rightEar: pre.rightEar === 0 ? 5 : 0
-        // })), 1000)
         const earWiggle = gsap.timeline({ paused: true, repeat: 2 });
         earWiggle.set('.ear-right', { transformOrigin:"center center" });
         earWiggle.to('.ear-right', {duration: 0.1, rotation: 45});
@@ -33,14 +29,6 @@ class Hippo extends Component{
             rightEar: pre.rightEar === 0 ? 5 : 0
         }))
     }
-    // onMouseMove(e){
-    //     const { screenX, screenY, pageX, pageY} = e;
-    //     console.log(e)
-    //     let radianDegrees = Math.atan2(pageX - screenX, pageY - screenY);
-    //     // console.log(radianDegrees);
-    //     let rotationDegrees = (radianDegrees * (180/ Math.PI) * -1) + 180;
-    //     // console.log(radianDegrees)
-    // }
 
     updateEyePosition(e) {
         const { clientX, clientY } = e;
@@ -64,13 +52,6 @@ class Hippo extends Component{
       }
 
     render(){
-        // const earWiggle = gsap.timeline({ paused: true, repeat: 2 });
-        // earWiggle.set('.ear-right', { transformOrigin:"center center" });
-        // earWiggle.to('.ear-right', {duration: 0.1, rotation: 45});
-        // earWiggle.to('.ear-right', {duration: 0.1, rotation: 0});
-        // const interval = window.setInterval(() => earWiggle.play(0), 2500);
-
-        // clearInterval(interval);
         const { posX, posY, rightEar } = this.state;
         return(
             <div className="hippo" onMouseMove={(e) => this.updateEyePosition(e)}>
