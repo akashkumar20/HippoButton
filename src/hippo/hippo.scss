@@ -1,0 +1,70 @@
+button {
+    background: transparent;
+    width: 240px;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+  }
+.hippo{
+    width: 100%;
+    height: 100vw;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background: midnightblue;
+}
+.ear-left-outer, .ear-right-outer {fill:#919191;}
+.ear-left-inner, .ear-right-inner {fill:#6D6D6D;}
+.eye-right-outer, .eye-left-outer, .nostril-right-outer, .nostril-left-outer, .body {fill:#AAAAAA;}
+.eye-right-inner, .eye-left-inner {fill:#FFFFFF;}
+.nostril-right-inner, .nostril-left-inner{fill:#8C8C8C;}
+.freckle {fill:#7C7C7C;}
+.tongue {fill:#FF4848;}
+.tooth-left, .tooth-right {fill:#FFFFE1;}
+button{
+    .mouth-back, .teeth, .tongue, .freckle, .body, .nostrils, .eyes{
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        transition: 0.5s;
+    }
+    .ears{
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        transition: 0.5s;
+    }
+}
+button:hover{
+    .mouth-back,  .tongue{
+        transform: matrix(1, 0, 0, 1, 0, -70);
+        transition: 0.5s;
+        transition-timing-function: ease-in-out
+    }
+    .teeth {
+        transform: matrix(1, 0, 0, 1.2, 0, -89.58);
+        transition: 0.5s;
+        transition-timing-function: ease-in-out
+    }
+    .freckle {
+        transform: matrix(1, 0, 0, 1, 0, -10);
+        transition: 0.5s;
+    }
+    .body {
+        transform: matrix(1, 0, 0, 1.06, 0, -5.88);
+        transition: 0.5s;
+    }
+    .nostrils{
+        transform: matrix(1, 0, 0, 1, 0, -6);
+        transition: 0.5s;
+    }
+    .eyes{
+        transform: matrix(1, 0, 0, 1, 0, 2);
+        transition: 0.5s;
+    }
+    .ears{
+        transform: matrix(1, 0, 0, 1, 0, 6);
+        transition: 0.5s;
+    }
+    // .ear-right{
+    //         transform: matrix(1, 0.09, -0.09, 1, 2.5, -10);
+    //         transition: 0.1s;
+    //         transform-origin: center center
+    //     }
+}
